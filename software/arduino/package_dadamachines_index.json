@@ -1,0 +1,58 @@
+{
+  "packages": [{
+    "name": "dadamachines doppler",
+    "maintainer": "dadamachines",
+    "websiteURL": "https://dadamachines.com",
+    "email": "hi@dadamachines.com",
+    "help": {
+      "online": "https://github.com/dadamachines/doppler"
+    },
+    "platforms": [{
+        "name": "dadamachines doppler (dependency: Arduino SAMD Boards 1.6.10)",
+        "architecture": "samd",
+        "version": "0.0.1",
+        "category": "Contributed",
+        "help": {
+          "online": "https://github.com/dadamachines/doppler"
+        },
+        "url": "https://github.com/dadamachines/automat/raw/97a34f28a0f35518dd6aab2d6e7075e5916afafc/software/arduino/dadamachines.zip",
+        "archiveFileName": "dadamachines-doppler-0.0.1.zip",
+        "size": "37129",
+        "boards": [{
+         "name": "dadamachines doppler",
+          "toolsDependencies": [
+            {
+              "name": "arm-none-eabi-gcc",
+              "packager": "arduino",
+              "version": "4.8.3-2014q1"
+            },
+            {
+              "name": "bossac",
+              "packager": "arduino",
+              "version": "1.8.0-48-gb176eee"
+            },
+            {
+              "name": "openocd",
+              "packager": "arduino",
+              "version": "0.9.0-arduino"
+            },
+            {
+              "name": "CMSIS",
+              "packager": "arduino",
+              "version": "4.5.0"
+            },
+            {
+              "name": "CMSIS-Atmel",
+              "packager": "arduino",
+              "version": "1.2.0"
+
+            }
+          ]
+        }]
+      }
+    ],
+    "tools": [
+
+    ]
+  }]
+}

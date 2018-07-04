@@ -1,0 +1,50 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+# dadamachines doppler
+dadamachines_doppler.name=dadamachines doppler (SAMD51)
+dadamachines_doppler.vid.0=0x16D0
+dadamachines_doppler.pid.0=0x0E3B
+dadamachines_doppler.vid.1=0x16D0
+dadamachines_doppler.pid.1=0x0E3C
+dadamachines_doppler.upload.tool=bossac18
+dadamachines_doppler.upload.protocol=sam-ba
+dadamachines_doppler.upload.maximum_size=507904
+dadamachines_doppler.upload.offset=0x4000
+dadamachines_doppler.upload.use_1200bps_touch=true
+dadamachines_doppler.upload.wait_for_upload_port=true
+dadamachines_doppler.upload.native_usb=true
+dadamachines_doppler.build.mcu=cortex-m4
+dadamachines_doppler.build.f_cpu=120000000L
+dadamachines_doppler.build.usb_product="dadamachines doppler"
+dadamachines_doppler.build.usb_manufacturer="dadamachines"
+dadamachines_doppler.build.usb_power=20
+dadamachines_doppler.build.board=DOPPLER
+dadamachines_doppler.build.core=arduino
+dadamachines_doppler.build.extra_flags=-D__SAMD51G19A__ -D__SAMD51__ {build.usb_flags} -D__FPU_PRESENT -DARM_MATH_CM4 -mfloat-abi=hard -mfpu=fpv4-sp-d16
+dadamachines_doppler.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+dadamachines_doppler.build.openocdscript=openocd_scripts/arduino_zero.cfg
+dadamachines_doppler.build.variant=doppler
+dadamachines_doppler.build.variant_system_lib=
+dadamachines_doppler.build.vid=0x16D0
+dadamachines_doppler.build.pid=0x0E3C
+dadamachines_doppler.bootloader.tool=openocd
+dadamachines_doppler.bootloader.file=doppler/bootloader.bin
+dadamachines_doppler.compiler.arm.cmsis.ldflags="-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
+dadamachines_doppler.menu.cache.on=Enabled
+dadamachines_doppler.menu.cache.on.build.cache_flags=-DENABLE_CACHE
+dadamachines_doppler.menu.cache.off=Disabled
+dadamachines_doppler.menu.cache.off.build.cache_flags=
