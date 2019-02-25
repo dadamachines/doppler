@@ -1,3 +1,3 @@
-# dadamachines - automat
+# dadamachines - doppler
 
-hardware files will follow after kickstarter campaign
+Here you can find the schematic for the **dadamachines - doppler** board & the library with the footprint for Autodesk EAGLE.
