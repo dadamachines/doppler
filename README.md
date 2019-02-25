@@ -1,7 +1,7 @@
 # dadamachines – doppler
 ## Cortex M4F & FPGA Development Board
 
-![doppler](img/dadamachines-doppler_front.png)
+![doppler](img/dadamachines-doppler-front.png)
 - arduino compatible board
 - 120Mhz ARM Cortex M4 MCU 1MB Flash (samd51g19a) with FPU
 - FPGA 5000 LUT, 1MBit RAM, 6 DSP Cores,OSC, PLL (Lattice ice40up5k)
