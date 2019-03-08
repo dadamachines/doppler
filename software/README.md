@@ -1,3 +1,4 @@
-# dadamachines - automat
+# dadamachines - doppler
 
-[Arduino](https://github.com/dadamachines/automat/tree/master/software/arduino) - Board Support Package for Arduino IDE
+This folder contains the software for the **dadamachines - doppler board** and the Board Support Package for the Arduino IDE. 
+
