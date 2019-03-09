@@ -47,7 +47,7 @@ or just [download it here](https://www.docker.com/products/docker-desktop).
 
 4. [Download zip](https://github.com/dadamachines/doppler-FPGA-firmware/archive/master.zip) or git clone the **doppler-FPGA-firmware**:  
 ```
-	git clone https://github.com/dadamachines/doppler-FPGA-firmware
+git clone https://github.com/dadamachines/doppler-FPGA-firmware
 ```
 5. Go into the directory you just downloaded.    
 ```
