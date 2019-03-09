@@ -63,7 +63,8 @@ docker build -t icestorm  icestorm/
 export MOUNTPOINT=`pwd`  
 docker run -it -v $MOUNTPOINT:/PRJ icestorm bash
 ```
-8. Now we are in the container and can build our bitstream.   For our **doppler_simple_io** example:  
+8. Now we are in the container and can build our bitstream.  
+For our **doppler_simple_io** example:    
 ```
 cd PRJ/doppler_simple_io/
 make
