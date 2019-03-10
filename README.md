@@ -46,7 +46,7 @@ brew cask install docker
 
 2. Open the **Docker** Application. And give it the privileges it's asking for.
 
-3. [Download zip](https://github.com/dadamachines/doppler-FPGA-firmware/archive/master.zip) or git clone the **doppler-FPGA-firmware**:  
+3. [Download zip](https://github.com/dadamachines/doppler-FPGA-firmware/archive/master.zip) or git clone the [**doppler-FPGA-firmware**](https://github.com/dadamachines/doppler-FPGA-firmware):  
 ```
   git clone https://github.com/dadamachines/doppler-FPGA-firmware
 ```
