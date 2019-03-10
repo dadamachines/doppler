@@ -36,35 +36,35 @@ Please find the instructions in our repository with the dadamachines board suppo
 
 ### Build the bitstream for the FPGA
 
-1. Install **Docker**.   
-On MacOs you can do this easily by running:  
+1.1 Install **Docker** as binary: 
+- [download here](https://www.docker.com/products/docker-desktop).
+
+1.2 If you are on **macOS** using **homebrew** you can do this easily by running:  
 ```
 brew cask install docker
 ```  
-or just [download it here](https://www.docker.com/products/docker-desktop).
 
-2. Open the **Docker** Application.  
-3. Give the **Docker** application the privileges it's asking for.
+2. Open the **Docker** Application. And give it the privileges it's asking for.
 
-4. [Download zip](https://github.com/dadamachines/doppler-FPGA-firmware/archive/master.zip) or git clone the **doppler-FPGA-firmware**:  
+3. [Download zip](https://github.com/dadamachines/doppler-FPGA-firmware/archive/master.zip) or git clone the **doppler-FPGA-firmware**:  
 ```
   git clone https://github.com/dadamachines/doppler-FPGA-firmware
 ```
-5. Go into the directory you just downloaded.    
+4. Go into the directory you just downloaded.    
 ```
 cd doppler-FPGA-firmware/
 ```
-6. Build the **icestorm** toolchain with **Docker**:  
+5. Build the **icestorm** toolchain with **Docker**:  
 This will take a while...  
 ```
 docker build -t icestorm  icestorm/
 ```
-7. Set the Mountpoint for **Docker**  
+6. Set the Mountpoint for **Docker**  
 ```
 export MOUNTPOINT=`pwd`  
 docker run -it -v $MOUNTPOINT:/PRJ icestorm bash
 ```
-8. Now we are in the container and can build our bitstream.   For our **doppler_simple_io** example:  
+7. Now we are in the container and can build our bitstream.   For our **doppler_simple_io** example:  
 ```
 cd PRJ/doppler_simple_io/
 make
