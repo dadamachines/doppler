@@ -5,7 +5,7 @@
 The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes in the same tiny form factor similar to a [Teensy](https://www.pjrc.com/store/teensy35.html) and is open source. 
 
 ## Features
-- 120Mhz ARM Cortex M4F MCU 1MB Flash (Microchip ATSAMD51G19A) with FPU
+- 120Mhz ARM Cortex M4F MCU 512KB Flash (Microchip ATSAMD51G19A) with FPU
 - FPGA 5000 LUT, 1MBit RAM, 6 DSP Cores,OSC, PLL (Lattice ICE40UP5K)
 - Arduino IDE compatible
 - Breadboard friendly (DIL48)
@@ -55,7 +55,7 @@ brew cask install docker
 cd doppler-FPGA-firmware/
 ```
 5. Build the **icestorm** toolchain with **Docker**:  
-This will take a while...  
+This will take a while...  (you only need todo that once or when updating the toolchain)
 ```
 docker build -t icestorm  icestorm/
 ```
@@ -64,7 +64,8 @@ docker build -t icestorm  icestorm/
 export MOUNTPOINT=`pwd`  
 docker run -it -v $MOUNTPOINT:/PRJ icestorm bash
 ```
-7. Now we are in the container and can build our bitstream.   For our **doppler_simple_io** example:  
+7. Now we are in the container and can build our bitstream.   For our **doppler_simple_io** example: 
+The Makefile generate the header file from bitstream to include in the arduino sketch.
 ```
 cd PRJ/doppler_simple_io/
 make
@@ -74,8 +75,8 @@ ls -l
 ### Load the bitstream on the FPGA
 ```
   #include <ICEClass.h>
-  #include "[PATHTO]/top.bin.h"
-  ICEClass ice40;
+  #include "[PATHTO]/top.bin.h" // set up the path to doppler_simple_io or custom firmware
+  ICEClass ice40;   // subclass ICEClass to implement custom spi protocol
    
   void setup() {
     ice40.upload(top_bin,sizeof(top_bin)); // Upload BitStream Firmware to FPGA -> see variant.h
