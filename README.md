@@ -17,8 +17,9 @@ The doppler is a Cortex M4F Microcontroller + FPGA development board. It comes i
 - 4 x 4 LED Matrix (connected to FPGA)
 - 2 User buttons (connected to FPGA)
 - AREF Solder Jumper
-- I2C (need external pullup), SPI, QSPI Pins
+- I2C (need external pullup), SPI, QSPI, USART Pins 
 - 2 DAC pins, 10 ADC pins
+- Pinout here: https://github.com/dadamachines/doppler/blob/master/hardware/doppler-quickstart_print.pdf
 - Full open source toolchain
 - SWD programming pin headers
 - Double press reset to enter the bootloader
